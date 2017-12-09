@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box {
+				width: 509px;
+				height: 270px;
+				border: 1px solid #000000;
+				margin: 100px auto;
+				background: url(img/shark1.png) left top no-repeat;
+				/*steps=7*/
+				animation: shake 2s steps(7);
+			}
+			@keyframes shake{
+				0%{
+					
+				}
+				100%{
+					/*270*7=1890*/
+					background-position: left -1890px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

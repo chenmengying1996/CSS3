@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>携程</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			img {
+				display: block;
+				width: 100%;
+			}
+			/*导航模块*/
+			.nav .item {
+				height: 90px;
+				display: flex;
+				background-color: deeppink;
+				margin: 10px;
+				border-radius: 15px;
+			}
+			.item .pub {
+				flex: 1;
+				border-right: 1px solid #FFFFFF;
+			}
+			.item .sub {
+				flex: 2;
+			}
+			.item .sub a {
+				width: 50%;
+				float: left;
+				/*会有4列*/
+				/*flex: 4;*/
+				text-align: center;
+				line-height: 45px;
+				border-right: 1px solid #FFFFFF;
+				border-bottom: 1px solid #FFFFFF;
+				/*以后会经常用到*/
+				box-sizing: border-box;
+				
+			}
+			.nav .item:nth-child(2) {
+				background-color: mediumseagreen;
+			}
+			.nav .item:nth-child(3) {
+				background-color: #d0a520;
+			}
+			.nav .item:nth-child(4) {
+				background-color: #e92322;
+			}
+			.extre {
+				display: flex;
+			}
+			.extre a {
+				flex: 1;
+			}
+			.footer .f-nav {
+				border-top: 1px solid #333333;
+				border-bottom: 1px solid #333333;
+				display: flex;
+			}
+			.f-nav li {
+				flex: 1;
+				text-align: center;
+				line-height: 50px;
+			}
+			.footer p {
+				text-align: center;
+				font-size: 12px;
+				color: #999999;
+				line-height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="banner">
+				<a href="#">
+					<img src="img/banner.jpg"/>
+				</a>
+			</div>
+			<nav class="nav">
+				<div class="item">
+					<div class="pub"></div>
+					<div class="sub">
+						<a href="javascript:;">海外酒店</a>
+						<a href="javascript:;">团购</a>
+						<a href="javascript:;">特惠酒店</a>
+						<a href="javascript:;">客栈公寓</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="pub"></div>
+					<div class="sub">
+						<a href="javascript:;">火车票</a>
+						<a href="javascript:;">汽车票</a>
+						<a href="javascript:;">国际机票</a>
+						<a href="javascript:;">自家专车</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="pub"></div>
+					<div class="sub">
+						<a href="javascript:;">火车票</a>
+						<a href="javascript:;">汽车票</a>
+						<a href="javascript:;">国际机票</a>
+						<a href="javascript:;">自家专车</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="pub"></div>
+					<div class="sub">
+						<a href="javascript:;">火车票</a>
+						<a href="javascript:;">汽车票</a>
+						<a href="javascript:;">国际机票</a>
+						<a href="javascript:;">自家专车</a>
+					</div>
+				</div>
+			</nav>
+			<!--其他-->
+			<div class="extre">
+				<a href="#"><img src="img/extra_1.png"></a>
+				<a href="#"><img src="img/extra_2.png"></a>
+			</div>
+			<!--底部-->
+			<div class="footer">
+				<ul class="f-nav">
+					<li>客户端</li>
+					<li>关于</li>
+					<li>联系我们</li>
+				</ul>
+				<p>网站地图 | ENGLISH | 电脑版</p>
+				<p>2015携程旅行</p>
+			</div>
+		</div>
+	</body>
+</html>

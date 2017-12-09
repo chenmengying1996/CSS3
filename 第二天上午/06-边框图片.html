@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 500px;
+				height: 400px;
+				background-color: pink;
+				margin: 40px auto;
+				/*边框图片属性*/
+				border-image-source: url(../img/border_image_2.png);
+				/*边框图片的裁剪*/
+				border-image-slice:27 27 27 27;
+				/*图片边框的宽度*/
+				border-image-width:27px;
+				
+				/*边框图片的平铺*/
+				border-image-repeat: round;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../img/border_image_2.png"/>
+		<div class="box"></div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+            width: 200px;
+            height: 200px;
+            margin:100px ;
+            background-color: green;
+            /* 调用*/
+            /* infinite:无限次*/
+            /* animation: 动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行*/
+            /*animation: move 1s  alternate linear 3 ;*/
+
+            /*animation: move 4s;*/
+            /*动画属性详解*/
+           /*动画名称*/
+          	animation-name:move;
+          	/*动画持续时间*/
+         	animation-duration: 2s;
+         	/*动画执行次数*/
+         	animation-iteration-count: 3;
+         	/*无数次：infinite*/
+         	/*是否反向*/
+         	animation-direction: alternate;
+         	/*正常方向：normal*/
+         	/*运动延迟*/
+         	animation-delay: 1s;
+         	/*将动画保持在结束位置*/
+         	animation-fill-mode: forwards;
+         	/*默认返回原位:backwards*/
+         	/*运动曲线*/
+         	animation-timing-function: steps(8);
+         	/*ease-in:加速 ease-in-out先加速再减速 steps（）分布执行*/
+        }
+        @keyframes  move{
+        	from{
+        		
+        	}
+        	to{
+        		transform: translateX(500px) rotate(555deg);
+        	}
+        }
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

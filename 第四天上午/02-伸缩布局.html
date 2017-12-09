@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body {
+				background-color: #EEEEEE;
+				font-family: "微软雅黑";
+				font-size: 22px;
+				font-weight: normal;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			section {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			ul {
+				background-color: #FFFFFF;
+				border: 1px solid #000000;
+				margin: 40px 0;
+			}
+			ul li {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				margin:10px;
+			}
+			section:nth-child(1) ul li {
+				float: left;
+			}
+			/*发生了清除浮动的问题，可以这样解决*/
+			section:nth-child(1) ul {
+				overflow: hidden;
+			}
+			
+			/*设置伸缩布局盒子*/
+			section:nth-child(2) ul {
+				/*ul里面的li设置伸缩布局，就把父盒子设置display:flex*/
+				display: flex;
+				/*相对于传统布局来说，不需要清除浮动*/
+			}
+			section:nth-child(3) ul {
+				/*设置伸缩布局*/
+				display: flex;
+				/*设置主轴方向*/
+				/*默认情况*/
+				flex-direction: row;
+			}
+			section:nth-child(4) ul {
+				/*设置伸缩布局*/
+				display: flex;
+				/*设置主轴方向*/
+				flex-direction: row-reverse;
+			}
+			section:nth-child(5) ul {
+				/*设置伸缩布局*/
+				display: flex;
+				/*设置主轴方向*/
+				flex-direction: column;
+			}
+			section:nth-child(6) ul {
+				/*设置伸缩布局*/
+				display: flex;
+				/*设置主轴方向*/
+				flex-direction: column-reverse;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h3>传统布局</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>伸缩布局</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+	</body>
+</html>

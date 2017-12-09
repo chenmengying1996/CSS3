@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body {
+				background-color: #000000;
+				overflow:hidden;
+			}
+			.sun {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				border-radius: 50%;
+				box-shadow: 0 0 30px 3px gold;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.earth {
+				width: 350px;
+				height: 350px;
+				/*background-color: yellow;*/
+				border: 1px solid #CCCCCC;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				animation: rot 8s linear infinite;
+			}
+			.earth::before {
+				content: "";
+				width: 40px;
+				height: 40px;
+				border-radius:50%;
+				position: absolute;
+				background-color: dodgerblue;
+				left: 0;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				
+			}
+			.moon {
+				width: 80px;
+				height: 80px;
+				/*background-color: yellow;*/
+				border: 1px solid #CCCCCC;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				/*月亮的left比较特殊*/
+				left: 0;
+				transform: translate(-50%,-50%);
+				animation: rot 5s linear infinite;
+			}
+			.moon::before {
+				content: "";
+				width: 20px;
+				height: 20px;
+				border-radius:50%;
+				position: absolute;
+				background-color: #fff;
+				left: 0;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.venus {
+				width: 500px;
+				height: 500px;
+				/*background-color: yellow;*/
+				border: 1px solid #CCCCCC;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				animation: rot 10s linear infinite;
+			}
+			.venus::before {
+				content: "";
+				width: 30px;
+				height: 30px;
+				border-radius:50%;
+				position: absolute;
+				background-color: red;
+				left: 0;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.mars {
+				width: 600px;
+				height: 600px;
+				/*background-color: yellow;*/
+				border: 1px solid #CCCCCC;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				animation: rot 8s linear infinite;
+			}
+			.mars::before {
+				content: "";
+				width: 60px;
+				height: 60px;
+				border-radius:50%;
+				position: absolute;
+				background-color: pink;
+				left: 0;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			@keyframes rot{
+				0%{
+					/*因为前面也有一个transform,这里如果不写translate(-50%,-50%)，会把前面的translate给覆盖掉，那么earth这个大盒子就不在中间了*/
+					transform: translate(-50%,-50%) rotate(0deg);
+				}
+				100%{
+					transform: translate(-50%,-50%) rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sun"></div>
+		<div class="earth">
+			<div class="moon"></div>
+		</div>
+		<div class="venus"></div>
+		<div class="mars"></div>
+	</body>
+</html>
+

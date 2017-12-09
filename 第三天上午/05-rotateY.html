@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.retateY{
+				width: 300px;
+				height: 226px;
+				margin: 200px auto;
+				/*给变换的盒子的父盒子加透视*/
+				perspective: 100px;
+			}
+			img {
+				/*过渡：谁发生了这个动作就加给谁*/
+				transition: transform 2s;
+			}
+			.retateY:hover img {
+				transform: rotateY(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="retateY">
+			<img src="img/y.jpg" alt="沿x轴旋转"/>
+		</div>
+	</body>
+</html>

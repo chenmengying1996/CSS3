@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			body {
+				background-color: dodgerblue;
+				font-family: "微软雅黑";
+				font-size: 20px;
+			}
+			ul {
+				width: 900px;
+				margin: 100px auto;
+				position: relative;
+			}
+			li {
+				width: 180px;
+				height: 80px;
+				float: left;
+				background-color: green;
+				cursor: pointer;
+			}
+			li span {
+				/*加了浮动之后相当于有了定位，也可以设置span的大小了*/
+				float: left;
+				height: 80px;
+				background-color: pink;
+			}
+			li .left {
+				width: 30px;
+				transform-origin: left;	
+			}
+			li .right {
+				width: 30px;
+				transform-origin: right;
+				/*为了以他为基准，调节center*/
+				/*transform: skew(0deg,30deg);*/
+			}
+			li .center {
+				width: 120px;
+				background-color: #CCCCCC;
+				text-align: center;
+				line-height: 80px;
+			}
+			li:hover .left {
+				transform: skew(0deg,-30deg);
+			}
+			li:hover .right {
+				transform: skew(0deg,30deg);
+			}
+			li:hover .center {
+				transform:translateY(-17px);
+				/*水平距离（向右为正）竖直距离（向下为正）模糊程度 阴影面积*/
+				box-shadow: 0 15px 10px -3px #666;
+			}
+			/*ul前后模拟*/
+			ul::before,ul::after {
+				content: "";
+				position: absolute;
+				width: 80px;
+				height: 80px;
+				background-color: pink;
+				left: -80px;
+				top: 0;
+			}
+			ul::after {
+				/*如果此时只有right并没有什么用，因为left被上面限制了*/
+				left: auto;
+				right: -80px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<span class="left"></span>
+				<span class="center">传智播客</span>
+				<span class="right"></span>
+			</li>
+			<li>
+				<span class="left"></span>
+				<span class="center">传智播客</span>
+				<span class="right"></span>
+			</li>
+			<li>
+				<span class="left"></span>
+				<span class="center">传智播客</span>
+				<span class="right"></span>
+			</li>
+			<li>
+				<span class="left"></span>
+				<span class="center">传智播客</span>
+				<span class="right"></span>
+			</li>
+			<li>
+				<span class="left"></span>
+				<span class="center">传智播客</span>
+				<span class="right"></span>
+			</li>
+		</ul>
+	</body>
+</html>

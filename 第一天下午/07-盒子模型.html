@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin-top: 20px;
+			}
+			.box2,.box3 {
+				border: 25px blue solid;
+				padding: 25px;
+			}
+			.box2 {
+				/*此时margin和padding都不变，只有盒子内容变小*/
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

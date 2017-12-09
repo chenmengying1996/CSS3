@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			ul {
+				width: 520px;
+				height: auto;
+				margin: 100px auto;
+			}
+			li {
+				float: left;
+				width: 70px;
+				height: 70px;
+				border: 1px solid #ccc;
+				text-align: center;
+				line-height: 70px;
+				margin-left: -1px;
+				margin-top: -1px;
+			}
+			/*注意：所选到的元素的类型，必定是指定的类型*/
+			/*先找父元素，再找里面指定的那个标签*/
+			li:first-child{
+				background-color: pink;
+			}
+			li:last-child{
+				background-color: pink;
+			}
+			/*第10个盒子背景色变粉红*/
+			/*li:nth-child(10){
+				background-color: pink;
+			}*/
+			/*序号为奇数的盒子变粉红*/
+			li:nth-child(odd){
+				background-color: pink;
+			}
+			/*序号为偶数的盒子变黄
+			 */
+			li:nth-child(even){
+				background-color: yellow;
+			}
+			/*n能够表示0，1，2，3，4，5.。。。。。*/
+			li:nth-child(n){
+				background-color: red;
+			}
+			li:nth-child(2n){
+				background-color: black;
+			}
+			li:nth-child(2n+1){
+				background-color: pink;
+			}
+			/*选中前五个*/
+			li:nth-child(-n+5){
+				background-color: blue;
+			}
+			li:nth-last-child(-n+5){
+				background-color: blue;
+			}
+			li:nth-child(7n){
+				background-color: orange;
+			}
+			li:nth-child(7n-1){
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<!--通过结构进行筛选；优势：不用加任何类名，可以快速选择到标签-->
+		<ul>
+
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+			<li>16</li>
+			<li>17</li>
+			<li>18</li>
+			<li>19</li>
+			<li>20</li>
+			<li>21</li>
+			<li>22</li>
+			<li>23</li>
+			<li>24</li>
+			<li>25</li>
+			<li>26</li>
+			<li>27</li>
+			<li>28</li>
+			<li>29</li>
+			<li>30</li>
+			<li>31</li>
+			<li>32</li>
+			<li>33</li>
+			<li>34</li>
+			<li>35</li>
+		</ul>
+	</body>
+</html>

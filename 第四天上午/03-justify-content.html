@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body {
+				background-color: #EEEEEE;
+				font-family: "微软雅黑";
+				font-size: 22px;
+				font-weight: normal;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			section {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			ul {
+				background-color: #FFFFFF;
+				border: 1px solid #000000;
+				margin: 40px 0;
+				display: flex;
+				height: 500px;
+			}
+			ul li {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				margin:10px;
+			}
+			section:nth-child(1) ul {
+				/*主轴对齐方式：从主轴开始的方向对齐，从左向右*/
+				justify-content: flex-start;
+			}
+			section:nth-child(2) ul {
+				/*主轴对齐方式：从主轴结束的方向对齐*/
+				justify-content: flex-end;
+			}
+			section:nth-child(3) ul {
+				/*主轴对齐方式：居中对齐*/
+				justify-content: center;
+			}
+			section:nth-child(4) ul {
+				/*主轴对齐方式：把父盒子平分*/
+				justify-content: space-around;
+			}
+			section:nth-child(5) ul {
+				/*主轴对齐方式：在父盒子两端对齐，中间平分*/
+				justify-content: space-between;
+			}
+			section:nth-child(6) ul {
+				/*主轴对齐方式：从侧轴开始的方向对齐，从上向下*/
+				align-items: flex-start;
+			}
+			section:nth-child(7) ul {
+				/*主轴对齐方式：从侧轴结束的方向对齐*/
+				align-items: flex-end;
+			}
+			section:nth-child(8) ul {
+				/*主轴对齐方式：从侧轴方向居中对齐*/
+				align-items: center;
+			}
+			section:nth-child(9) ul {
+				/*主轴对齐方式：与flex-start一样，*/
+				align-items: baseline;
+			}
+			section:nth-child(10) ul {
+				/*主轴对齐方式：与flex-start一样，*/
+				align-items: stretch;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h3>传统布局</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>伸缩布局</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+		<section>
+			<h3>主轴方向：竖直方向上反转</h3>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+	</body>
+</html>

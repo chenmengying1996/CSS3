@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.retateZ{
+				width: 300px;
+				height: 226px;
+				margin: 200px auto;
+				/*给变换的盒子的父盒子加透视*/
+				perspective: 100px;
+			}
+			img {
+				/*过渡：谁发生了这个动作就加给谁*/
+				transition: transform 2s;
+			}
+			.retateZ:hover img {
+				transform: rotateZ(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="retateZ">
+			<img src="img/z.jpg" alt="沿x轴旋转"/>
+		</div>
+	</body>
+</html>

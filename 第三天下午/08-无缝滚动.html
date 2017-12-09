@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.view {
+				width: 882px;
+				height: 86px;
+				margin: 200px auto;
+				position: relative;
+				border: 1px solid #CCCCCC;
+				overflow: hidden;
+			}
+			ul {
+				width: 1764px;
+				height: 86px;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				position:absolute;
+				left:0;
+				animation: move 7s linear infinite;
+			}
+			li {
+				float: left;
+			}
+			ul:hover {
+				animation-play-state: paused;
+				/*还有一种状态是running*/
+			}
+			@keyframes move{
+				0%{
+					transform: translateX(0);
+				}
+				100%{
+					transform: translateX(-882px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="view">
+			<ul>
+				<li><img src="img/1.jpg"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
+				<li><img src="img/5.jpg"></li>
+				<li><img src="img/6.jpg"></li>
+				<li><img src="img/7.jpg"></li>
+				<!--这里再放7张同样图片的原因是：ul动起来的时候，.view盒子就空了那一部分-->
+				<li><img src="img/1.jpg"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
+				<li><img src="img/5.jpg"></li>
+				<li><img src="img/6.jpg"></li>
+				<li><img src="img/7.jpg"></li>
+			</ul>
+		</div>
+	</body>
+</html>

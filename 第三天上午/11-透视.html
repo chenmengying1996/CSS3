@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.out {
+				width: 500px;
+				height: 500px;
+				border: 1px solid #000000;
+				background-color: blue;
+				margin: 100px auto;
+				perspective: 600px;
+				/*有此例可知，透视并不是真正的3D效果*/
+				transform: rotateY(13deg);
+				
+			}
+			.in {
+				width: 300px;
+				height: 300px;
+				margin: 100px auto;
+				background-color:red;
+				/*transform: translateX(200px) rotateY(123deg);*/
+				/*过渡是谁发生的就写在哪里*/
+				transition: all 2s;
+			}
+			.out:hover .in {
+				transform: translateX(200px) rotateY(123deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="out">
+			<div class="in"></div>
+		</div>
+	</body>
+</html>

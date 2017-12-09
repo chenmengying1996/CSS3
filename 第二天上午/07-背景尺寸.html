@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box {
+				width: 600px;
+				height: 600px;
+				border: 1px solid #000000;
+				margin: 100px auto;
+				background: url(../img/mino1.jpg) no-repeat;
+				/*此时背景和盒子不一样大，但是我希望他一样大，所以得改变背景大小*/
+				/*水平，垂直*/
+				/*background-size: 500px 500px;
+				background-size: 100% 100%;*/
+				/*cover覆盖:保证能把盒子覆盖住，但有可能超出，超出部分我们看不见。当盒子变大，图片会变大*/
+				/*background-size: cover;*/
+				/*contain包含:最大化在盒子中显示，但不保证能把盒子铺满。当盒子变大，图片会变大*/
+				background-size: contain;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
